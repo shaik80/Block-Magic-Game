@@ -56,3 +56,15 @@ function Piece(block,color){
     this.y=4;
 
 }
+//draw the piece on board
+Piece.prototype.draw=function(){
+    for(r=0;r<this.activeBlock.length;i++){
+        for(c=0;c<this.activeBlock.length;c++){
+        if(this.activeTetramino[r][c]){
+            drawSquare(this.x+c,this.y+r,this.color);
+        }
+            
+        }
+    }
+}
+p.draw();
