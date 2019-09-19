@@ -13,3 +13,12 @@ function drawSquare(x,y,color){
     c.strokeStyle="black";
     c.strokeRect(x*sq,y*sq,sq,sq);
 }
+// create the board
+
+let board = [];
+for( r = 0; r <ROW; r++){
+    board[r] = [];
+    for(c = 0; c < COL; c++){
+        board[r][c] = VACANT;
+    }
+}
