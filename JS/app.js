@@ -46,3 +46,13 @@ const PIECES = [
 ];
 //initiate a piece
 let p= new Piece(PIECES[0][0],PIECES[0][1])
+//The object piece
+function Piece(block,color){
+    this.block=block;
+    this.color=color;
+    this.blockN=0;
+    this.activeBlock=this.block[this.blockN];
+    this.x=2;
+    this.y=4;
+
+}
