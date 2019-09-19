@@ -16,17 +16,17 @@ function drawSquare(x,y,color){
 // create the board
 
 let board = [];
-for( r = 0; r <ROW; r++){
-    board[r] = [];
-    for(c = 0; c < COL; c++){
-        board[r][c] = VACANT;
+for( i = 0; i <row; i++){
+    board[i] = [];
+    for(j = 0; j < col; j++){
+        board[i][j] = vacant;
     }
 }
 // draw the board
 function drawBoard(){
-    for( r = 0; r <ROW; r++){
-        for(c = 0; c < COL; c++){
-            drawSquare(c,r,board[r][c]);
+    for( i = 0; i <row; i++){
+        for(j = 0; j < row; j++){
+            drawSquare(j,i,board[i][j]);
         }
     }
 }
@@ -44,8 +44,13 @@ const PIECES = [
     [I,"cyan"],
     [J,"orange"]
 ];
-//initiate a piece
-let p= new Piece(PIECES[0][0],PIECES[0][1])
+//Random block
+function randomPiece(){
+    let r = randomN = Math.floor(Math.random() * PIECES.length) // 0 -> 6
+    return new Piece( PIECES[r][0],PIECES[r][1]);
+}
+
+let p = randomPiece();
 //The object piece
 function Piece(block,color){
     this.block=block;
@@ -57,14 +62,21 @@ function Piece(block,color){
 
 }
 //draw the piece on board
-Piece.prototype.draw=function(){
-    for(r=0;r<this.activeBlock.length;i++){
-        for(c=0;c<this.activeBlock.length;c++){
-        if(this.activeTetramino[r][c]){
-            drawSquare(this.x+c,this.y+r,this.color);
+Piece.prototype.fill=function(){
+    for(i=0;i<this.activeBlock.length;i++){
+        for(j=0;j<this.activeBlock.length;j++){
+        if(this.activeBlock[i][j]){
+            drawSquare(this.x+j,this.y+i,this.color);
         }
             
         }
     }
 }
-p.draw();
+
+Piece.prototype.draw = function(){
+    this.fill(this.color);
+}
+// undraw a piece
+Piece.prototype.unDraw = function(){
+    this.fill(vacant);
+}
