@@ -32,3 +32,17 @@ function drawBoard(){
 }
 
 drawBoard();
+
+// the pieces and their colors
+
+const PIECES = [
+    [Z,"red"],
+    [S,"green"],
+    [T,"yellow"],
+    [O,"blue"],
+    [L,"purple"],
+    [I,"cyan"],
+    [J,"orange"]
+];
+//initiate a piece
+let p= new Piece(PIECES[0][0],PIECES[0][1])
