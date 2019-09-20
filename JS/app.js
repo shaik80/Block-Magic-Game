@@ -25,7 +25,7 @@ for( i = 0; i <row; i++){
 // draw the board
 function drawBoard(){
     for( i = 0; i <row; i++){
-        for(j = 0; j < row; j++){
+        for(j = 0; j < col; j++){
             drawSquare(j,i,board[i][j]);
         }
     }

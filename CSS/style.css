@@ -1,8 +1,16 @@
-#colorBlock{
-    width: 25vh;
-    height: 25vw;
+/* #Block{
+    width: 15;
+    height: 25;
 
 }
 canvas{
     border:2px solid blue;
+} */
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 350px;
 }
