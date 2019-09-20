@@ -1,0 +1,8 @@
+#colorBlock{
+    width: 25vh;
+    height: 25vw;
+
+}
+canvas{
+    border:2px solid blue;
+}

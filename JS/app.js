@@ -1,4 +1,4 @@
-const canvas=document.getElementById("colorBlock");
+const canvas=document.getElementById("Block");
 const c=canvas.getContext('2d');
 const row=20;
 const col=column=10;
@@ -46,20 +46,20 @@ const PIECES = [
 ];
 //Random block
 function randomPiece(){
-    let i = randomN = Math.floor(Math.random() * PIECES.length) // 0 -> 6
-    return new Blockmagiclogic( PIECES[i][0],PIECES[i][1]);
+    let r = randomN = Math.floor(Math.random() * PIECES.length) // 0 -> 6
+    return new Piece( PIECES[r][0],PIECES[r][1]);
 }
 
 let p = randomPiece();
 //The object piece
-class Blocklogicmagic{
+class Piece{
 constructor(block,color){
     this.block=block;
     this.color=color;
     this.blockN=0;
     this.activeBlock=this.block[this.blockN];
-    this.x=3;
-    this.y=-2;
+    this.x=2;
+    this.y=4;
 
 }
 //draw the piece on board
@@ -80,5 +80,4 @@ draw(){
 // undraw a piece
 unDraw(){
     this.fill(vacant);
-}
-}
+}}
