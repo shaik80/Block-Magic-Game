@@ -46,23 +46,24 @@ const PIECES = [
 ];
 //Random block
 function randomPiece(){
-    let r = randomN = Math.floor(Math.random() * PIECES.length) // 0 -> 6
-    return new Piece( PIECES[r][0],PIECES[r][1]);
+    let i = randomN = Math.floor(Math.random() * PIECES.length) // 0 -> 6
+    return new Blockmagiclogic( PIECES[i][0],PIECES[i][1]);
 }
 
 let p = randomPiece();
 //The object piece
-function Piece(block,color){
+class Blocklogicmagic{
+constructor(block,color){
     this.block=block;
     this.color=color;
     this.blockN=0;
     this.activeBlock=this.block[this.blockN];
-    this.x=2;
-    this.y=4;
+    this.x=3;
+    this.y=-2;
 
 }
 //draw the piece on board
-Piece.prototype.fill=function(){
+fill(){
     for(i=0;i<this.activeBlock.length;i++){
         for(j=0;j<this.activeBlock.length;j++){
         if(this.activeBlock[i][j]){
@@ -73,10 +74,11 @@ Piece.prototype.fill=function(){
     }
 }
 
-Piece.prototype.draw = function(){
+draw(){
     this.fill(this.color);
 }
 // undraw a piece
-Piece.prototype.unDraw = function(){
+unDraw(){
     this.fill(vacant);
+}
 }
