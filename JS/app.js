@@ -145,6 +145,7 @@ class Blockmagiclogic{
                 }
                 // pieces to lock on top = game over
                 if(this.y + r < 0){
+                    
                     alert("Game Over");
                     // stop request animation frame
                     gameOver = true;
