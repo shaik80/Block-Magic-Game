@@ -45,6 +45,9 @@ class Background{
         }
         else{
             this.dy += gravity
+            if(console.log(this.y == this.dy)){
+                location.replace("");
+            }
         }
         this.y +=this.dy
     
@@ -76,9 +79,7 @@ function init() {
 function animateball() {
     ballarray.forEach(ball => {
      ball.draw()
-     if(console.log(ball.y == ball.dy)){
-        location.replace("https://www.w3schools.com");
-    }
+     
 
     })
     ball.draw()
