@@ -145,6 +145,7 @@ class Blockmagiclogic{
                     alert("Game Over");
                     // stop request animation frame
                     gameOver = true;
+                    location.replace("./game.html")
                     break;
                 }
                 // we lock the piece
@@ -170,7 +171,8 @@ class Blockmagiclogic{
                     board[0][c] = VACANT;
                 }
                 // increment the score
-                score += 10;
+                
+                localStorage.setItem("high score", score += 10)
             }
         }
         // update the board
