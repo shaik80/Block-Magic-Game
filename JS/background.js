@@ -1,18 +1,16 @@
-let canvas =document.querySelector("canvas");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-const ctx = canvas.getContext("2d")
-canvas.width = innerWidth
-canvas.height = innerHeight
-
-
-const colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']
+let can =document.getElementById("background");
+can.width = window.innerWidth;
+can.height = window.innerHeight;
+const ctx = can.getContext("2d")
+can.width = innerWidth
+can.height = innerHeight
 
 let gravity = 0.3
 let friction = 0.6
 
 
 function randomIntFromRange(min,max){
+
     return Math.floor(Math.random() * (max - min +1)+min)
 }
 function randomColor(){
@@ -40,17 +38,13 @@ class Background{
     
     update() {
 
-        if(this.y +this.radius > canvas.height){
+        if(this.y +this.radius > can.height){
             this.dy = -this.dy * friction
         }
         else{
             this.dy += gravity
-            if(console.log(this.y == this.dy)){
-                location.replace("");
-            }
         }
         this.y +=this.dy
-    
         this.draw()
     }
 
@@ -69,8 +63,8 @@ let ballarray = []
 function init() {
     ball = new Background()
     for (let i = 0; i < 100; i++) {
-        let x =randomIntFromRange(0, canvas.width)
-        let Y =randomIntFromRange(0, canvas.height - 20)
+        let x =randomIntFromRange(0, can.width)
+        let Y =randomIntFromRange(0, can.height - 20)
         ballarray.push(new Background(x,Y,1,20,randomColor()))
     }
 }
@@ -79,7 +73,6 @@ function init() {
 function animateball() {
     ballarray.forEach(ball => {
      ball.draw()
-     
 
     })
     ball.draw()
@@ -89,13 +82,12 @@ init()
 $("#btn-play").click(
     function animate() {
         requestAnimationFrame(animate)
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.clearRect(0, 0, can.width, can.height)
         ctx.font = "30px Arial";
         ballarray.forEach(ball => {
          ball.update()
         })
         ball.update()
-
     }
 )
 animateball();

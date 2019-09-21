@@ -3,6 +3,10 @@
     overflow-x: hidden;
 
 }
+body{
+    /* background-image: url(../img/background-img.jpg) */
+    /* background-image: linear-gradient(red, yellow); */
+}
 .logo{
     width: auto;
     height: 20em;
@@ -10,6 +14,9 @@
 .start-page{
         position: absolute;
         top: 4em;
+}
+#Block{
+    position: relative;
 }
 .btn-play{
     background-color: #23f111;

@@ -4,10 +4,7 @@ const ctx = canvas.getContext("2d")
 const ROW=20;
 const COL=column=10;
 const sqsquareSize = SQ =25;
-let grd = ctx.createLinearGradient(500,0,700,700);
-          grd.addColorStop(0,"#8bcbf1");
-          grd.addColorStop(1,"white");
-const VACANT = grd; // color of an empty square
+const VACANT = "white"; // color of an empty square
 let board = [];
 for( r = 0; r <ROW; r++){
     board[r] = [];
@@ -28,7 +25,7 @@ const PIECES = [
 function drawSquare(x,y,color){
     ctx.fillStyle = color;
     ctx.fillRect(x*SQ,y*SQ,SQ,SQ);
-    ctx.strokeStyle = "white";
+    ctx.strokeStyle = "black";
     ctx.strokeRect(x*SQ,y*SQ,SQ,SQ);
 }
 
