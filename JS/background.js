@@ -89,6 +89,7 @@ $("#btn-play").click(
          location.replace("./game.html")
         })
         ball.update()
+        location.replace("./game.html")
     }
 )
 animateball();
