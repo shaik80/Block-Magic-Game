@@ -45,9 +45,12 @@ class Background{
         }
         else{
             this.dy += gravity
+                    if(this.y == this.dy){
+            location.replace("https://www.w3schools.com");
+        }
+
         }
         this.y +=this.dy
-        if(this.y == )
     
         this.draw()
     }
