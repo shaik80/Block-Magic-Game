@@ -98,6 +98,7 @@ if(button==='c'){
     z.style.display="none";
     y.style.display="block";
     startGame();
+    x.style.display="block";
 }}
 
 
@@ -123,22 +124,22 @@ var myGamePiece;
 
     
     function startGame() {
-        myGamePiece = new component(30, 30, "red", 80, 75);
-        myGamePiece1 = new component(30, 30, "blue", 50, 55);
-        myGamePiece2 = new component(30, 30, "green", 100, 105);
-        myGamePiece3 = new component(30, 30, "yellow", 300, 455);
-        myGamePiece4 = new component(30, 30, "orange", 400, 45);
-        myGamePiece5 = new component(30, 30, "pink", 900, 35);
-        myGamePiece6 = new component(30, 30, "green", 2000, 205);
-        myGamePiece7 = new component(30, 30, "orange", 300, 505);
-        myGamePiece8 = new component(30, 30, "yellow", 700, 305);
-        myGamePiece9 = new component(30, 30, "blue", 600, 805);
-        myGamePiece10 = new component(30, 30, "red", 400, 605);
-        myGamePiece11 = new component(30, 30, "green", 500, 705);
-        myGamePiece12 = new component(30, 30, "cyan", 700, 685);
-        myGamePiece13 = new component(30, 30, "red", 30, 805);
-        myGamePiece14 = new component(30, 30, "pink", 80, 905);
-        myGamePiece15 = new component(30, 30, "pink", 500, 405);
+        myGamePiece = new component(100, 100, "red", 80, 75);
+        myGamePiece1 = new component(100, 100, "blue", 50, 55);
+        myGamePiece2 = new component(100, 100, "green", 100, 105);
+        myGamePiece3 = new component(100, 100, "yellow", 300, 455);
+        myGamePiece4 = new component(100, 100, "orange", 400, 45);
+        myGamePiece5 = new component(100, 100, "pink", 900, 35);
+        myGamePiece6 = new component(100, 100, "green", 2000, 205);
+        myGamePiece7 = new component(100, 100, "orange", 300, 505);
+        myGamePiece8 = new component(100, 100, "yellow", 700, 305);
+        myGamePiece9 = new component(100, 100, "blue", 600, 805);
+        myGamePiece10 = new component(100, 100, "red", 400, 605);
+        myGamePiece11 = new component(100, 100, "green", 500, 705);
+        myGamePiece12 = new component(100, 100, "cyan", 700, 685);
+        myGamePiece13 = new component(100, 100, "red", 2000, 2005);
+        myGamePiece14 = new component(100, 100, "pink", 80, 905);
+        myGamePiece15 = new component(100, 100, "pink", 500, 405);
         myGameArea.start();
     }
     
