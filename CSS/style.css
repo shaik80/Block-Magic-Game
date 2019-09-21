@@ -1,0 +1,12 @@
+*{
+    overflow-x: hidden
+}
+.canvasdesign{
+
+}
+.score-design{
+    font-size: 3em;
+}
+#logo{
+    visibility: hidden;
+}
