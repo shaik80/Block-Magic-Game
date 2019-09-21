@@ -35,7 +35,6 @@ class Background{
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
         ctx.fillStyle = this.color
         ctx.fill()
-        ctx.stroke()
         ctx.closePath()
     }
     
@@ -44,10 +43,11 @@ class Background{
         if(this.y +this.radius > canvas.height){
             this.dy = -this.dy * friction
         }
-        
         else{
             this.dy += gravity
         }
+        this.y +=this.dy
+        if(this.y == )
     
         this.draw()
     }
@@ -74,7 +74,7 @@ function init() {
 }
 
 // Animation Loop
-function animate() {
+function animateball() {
     ballarray.forEach(ball => {
      ball.draw()
     })
@@ -83,7 +83,7 @@ function animate() {
 
 init()
 $("#btn-play").click(
-    function animate(){
+    function animate() {
         requestAnimationFrame(animate)
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         ctx.font = "30px Arial";
@@ -91,6 +91,7 @@ $("#btn-play").click(
          ball.update()
         })
         ball.update()
+
     }
 )
-animate();
+animateball();

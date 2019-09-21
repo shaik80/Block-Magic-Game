@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 *{
     overflow-x: hidden;
 
@@ -14,12 +14,18 @@
 .btn-play{
     background-color: #23f111;
     color: #ffffff;
-    font-weight: 700;
+    outline: none;
+    font-weight: bold;
     font-size: 1.2em;
-    border-radius: 50px;
-    margin-bottom: 3em;
-    padding: 1em;
+    font-family: Roboto,sans-serif;
+    border-radius: 29px;
+    margin-top: 5em;
+    padding: 0.5em;
     padding-left: 2em;
     padding-right: 2em;
     
+}
+.btn-play:hover{
+    transition:all 2s;
+    background-color: #fdf30c;
 }
