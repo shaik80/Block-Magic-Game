@@ -21,7 +21,7 @@ const PIECES = [
     [S,"green"],
     [T,"yellow"],
     [O,"blue"],
-    [L,"purple"],
+    [L,"purple],
     [I,"cyan"],
     [J,"orange"]
 ];
@@ -245,6 +245,11 @@ function CONTROL(event){
 let dropStart = Date.now();
 let gameOver = false;
 function drop(){
+    var img = new Image();   // Create new img element
+img.src = '../img/img.jpeg'; 
+
+ctx.drawImage(img, 20, 30);
+
     let now = Date.now();
     let delta = now - dropStart;
     if(delta > 1*200 ){

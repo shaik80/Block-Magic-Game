@@ -73,6 +73,10 @@ function init() {
 function animate() {
     requestAnimationFrame(animate)
     ctx.clearRect(0, 0, canvas.width, canvas.height)
+    ctx.font = "30px Arial";
+// ctx.fillText("Hello World",canvas.width/2, canvas.height/2);
+// ctx.fillStyle = "#FF0000";
+// ctx.fillRect(0,0,200,55)
     ballarray.forEach(ball => {
      ball.update()
     })
