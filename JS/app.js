@@ -81,6 +81,10 @@ draw(){
 unDraw(){
     this.fill(vacant);
 }}
+
+
+
+//Start page with logo and name
 function start(button){
     x= document.getElementById("Block")
 x.style.display="block";
@@ -90,18 +94,50 @@ if(button==='c'){
     y= document.getElementById("startpage")
 y.style.display="none";
 }}
+
+//Gravity boxe
 var myGamePiece;
+var myGamePiece1;
+var myGamePiece2;
+var myGamePiece3;
+var myGamePiece4;
+var myGamePiece5;
+var myGamePiece6;
+var myGamePiece7;
+var myGamePiece8;
+var myGamePiece9;
+var myGamePiece10;
+var myGamePiece11;
+var myGamePiece12;
+var myGamePiece13;
+var myGamePiece14;
+var myGamePiece15;
 
 function startGame() {
     myGamePiece = new component(30, 30, "red", 80, 75);
+    myGamePiece1 = new component(30, 30, "blue", 50, 55);
+    myGamePiece2 = new component(30, 30, "green", 100, 105);
+    myGamePiece3 = new component(30, 30, "yellow", 300, 455);
+    myGamePiece4 = new component(30, 30, "orange", 400, 45);
+    myGamePiece5 = new component(30, 30, "pink", 900, 35);
+    myGamePiece6 = new component(30, 30, "green", 2000, 205);
+    myGamePiece7 = new component(30, 30, "orange", 300, 505);
+    myGamePiece8 = new component(30, 30, "yellow", 700, 305);
+    myGamePiece9 = new component(30, 30, "blue", 600, 805);
+    myGamePiece10 = new component(30, 30, "red", 400, 605);
+    myGamePiece11 = new component(30, 30, "green", 500, 705);
+    myGamePiece12 = new component(30, 30, "cyan", 700, 685);
+    myGamePiece13 = new component(30, 30, "red", 30, 805);
+    myGamePiece14 = new component(30, 30, "darkpink", 80, 905);
+    myGamePiece15 = new component(30, 30, "red", 500, 405);
     myGameArea.start();
 }
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 20);        
@@ -149,4 +185,39 @@ function updateGameArea() {
     myGameArea.clear();
     myGamePiece.newPos();
     myGamePiece.update();
-}
+    myGamePiece1.newPos();
+    myGamePiece1.update();
+    myGamePiece2.newPos();
+    myGamePiece2.update();
+    myGamePiece3.newPos();
+    myGamePiece3.update();
+    myGamePiece4.newPos();
+    myGamePiece4.update();
+    myGamePiece5.newPos();
+    myGamePiece5.update();
+    myGamePiece6.newPos();
+    myGamePiece6.update();
+    myGamePiece7.newPos();
+    myGamePiece7.update();
+    myGamePiece8.newPos();
+    myGamePiece8.update();
+    myGamePiece9.newPos();
+    myGamePiece9.update();
+    myGamePiece10.newPos();
+    myGamePiece10.update();
+    myGamePiece11.newPos();
+    myGamePiece11.update();
+    myGamePiece12.newPos();
+    myGamePiece12.update();
+    myGamePiece13.newPos();
+    myGamePiece13.update();
+    myGamePiece14.newPos();
+    myGamePiece14.update();
+    myGamePiece15.newPos();
+    myGamePiece15.update();
+    // myGamePiece5.newPos();
+    // myGamePiece5.update();
+    // myGamePiece5.newPos();
+    // myGamePiece5.update();
+   
+    }
