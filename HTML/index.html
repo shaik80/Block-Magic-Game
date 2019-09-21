@@ -8,8 +8,25 @@
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-    <canvas id="Block" ></canvas>
-
+    <canvas id="Block" width="200" height="400" style="border:2px  black"></canvas>
+    
+    <div class="container" id="startpage">
+        <div class="row" >
+            <div class="col-4"></div>
+            <div class="col-4" style="text-align: center"><img  class="logo" src="../Images/logo.PNG"></div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>    
+            <div class="col-10" style="text-align: center"><img class="name" src="../Images/name.PNG"></div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div> 
+            <div class="col-4" style="text-align: center"> <button class="play-btn" onclick="start('c')">Play</button></div>
+            <div class="col-4"></div>
+       </div>
+     </div>
 </body>
 <script src="../JS/blockArray.js"></script>
 <script src="../JS/app.js"></script>
