@@ -25,7 +25,7 @@ function randomColor(colors){
     return colors(Math.floor(Math.random()*color.length))
 }
 // Objects
-function Ball(x, y, dy, radius, color) {
+function squre(x, y, dy, radius, color) {
     this.x = x
     this.y = y
     this.dy = dy
@@ -59,13 +59,12 @@ let ball;
 let ballarray = []
 
 function init() {
-    ball = new Ball(canvas.width/2,canvas.height/2,1,30,"red")
+    ball = new squre(canvas.width/2,canvas.height/2,1,30,"red")
 
     for (let i = 0; i < 100; i++) {
         let x =randomIntFromRange(0, canvas.width)
-
         let Y =randomIntFromRange(0, canvas.height - 20)
-        ballarray.push(new Ball(x,Y,2,30,"red"))
+        ballarray.push(new squre(x,Y,2,30,"red"))
     }
 }
 
