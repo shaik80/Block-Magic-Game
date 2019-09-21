@@ -81,3 +81,12 @@ draw(){
 unDraw(){
     this.fill(vacant);
 }}
+function start(button){
+    x= document.getElementById("Block")
+x.style.display="block";
+
+
+if(button==='c'){
+    y= document.getElementById("startpage")
+y.style.display="none";
+}}
