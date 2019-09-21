@@ -86,6 +86,7 @@ $("#btn-play").click(
         ctx.font = "30px Arial";
         ballarray.forEach(ball => {
          ball.update()
+         location.replace("./game.html")
         })
         ball.update()
     }
