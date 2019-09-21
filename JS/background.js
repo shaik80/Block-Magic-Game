@@ -44,10 +44,10 @@ class Background{
         if(this.y +this.radius > canvas.height){
             this.dy = -this.dy * friction
         }
+        
         else{
             this.dy += gravity
         }
-        this.y +=this.dy
     
         this.draw()
     }
@@ -83,7 +83,7 @@ function animate() {
 
 init()
 $("#btn-play").click(
-    function animate() {
+    function animate(){
         requestAnimationFrame(animate)
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         ctx.font = "30px Arial";
