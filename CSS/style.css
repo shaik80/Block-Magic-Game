@@ -6,9 +6,19 @@
 canvas{
     border:2px solid blue;
 } */
-#Block{
+/* #Block{
 display: none;
+} */
+#Block{
+    display: none;
 }
+
+#Gravity{
+    display: none;
+}
+
+
+
 canvas {
     padding-left: 0;
     padding-right: 0;
