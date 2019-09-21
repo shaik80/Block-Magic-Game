@@ -1,4 +1,3 @@
-
 const canvas=document.getElementById("Block");
 const scoreElement = document.getElementById("score");
 const ctx = canvas.getContext("2d")
