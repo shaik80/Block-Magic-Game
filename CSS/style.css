@@ -15,8 +15,8 @@ body{
         position: absolute;
         top: 4em;
 }
-#Block{
-    position: relative;
+.score{
+    font-weight: 900;
 }
 .btn-play{
     background-color: #23f111;
