@@ -8,7 +8,8 @@
     height: 20em;
 }
 .start-page{
-    height: 100vh;
+        position: absolute;
+        top: 4em;
 }
 .btn-play{
     background-color: #23f111;
