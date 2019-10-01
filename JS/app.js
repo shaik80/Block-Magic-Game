@@ -64,14 +64,21 @@ class Blockmagiclogic{
     }
 
     fill (color){
-        for( r = 0; r < this.activeTetromino.length; r++){
-            for(c = 0; c < this.activeTetromino.length; c++){
-                // we draw only occupied squares
+        this.activeTetromino.forEach((r,c) => {
+            
                 if( this.activeTetromino[r][c]){
                     drawSquare(this.x + c,this.y + r, color);
                 }
-            }
-        }    
+            
+        });
+        // for( r = 0; r < this.activeTetromino.length; r++){
+        //     for(c = 0; c < this.activeTetromino.length; c++){
+        //         // we draw only occupied squares
+        //         if( this.activeTetromino[r][c]){
+        //             drawSquare(this.x + c,this.y + r, color);
+        //         }
+        //     }
+        // }    
     }
 
     moveDown(){
