@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 *{
-    overflow-x: hidden;
-
+    overflow: hidden;
 }
 body{
     /* background-image: url(../img/background-img.jpg) */
@@ -33,6 +32,12 @@ body{
     padding-left: 2em;
     padding-right: 2em;
     
+}
+
+
+.buttons{
+        position: absolute;
+        top: 32em;
 }
 .btn-play:hover{
     transition:all 2s;

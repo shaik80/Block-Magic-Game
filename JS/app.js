@@ -31,10 +31,9 @@ function drawSquare(x,y,color){
 
 
 function drawBoard(){
-    for( r = 0; r <ROW; r++){
+    for( r = 0; r < ROW; r++){
         for(c = 0; c < COL; c++){
             drawSquare(c,r,board[r][c]);
-             
         }
     }
 }
@@ -64,75 +63,36 @@ class Blockmagiclogic{
     }
 
     fill (color){
-        this.activeTetromino.forEach((r,c) => {
-            
-                if( this.activeTetromino[r][c]){
-                    drawSquare(this.x + c,this.y + r, color);
-                }
-            
+        this.activeTetromino.forEach((v,r) => {
+            this.activeTetromino.forEach((v,c) => {
+            (this.activeTetromino[r][c]) ? drawSquare(this.x + c,this.y + r, color):null;
+            })
         });
-        // for( r = 0; r < this.activeTetromino.length; r++){
-        //     for(c = 0; c < this.activeTetromino.length; c++){
-        //         // we draw only occupied squares
-        //         if( this.activeTetromino[r][c]){
-        //             drawSquare(this.x + c,this.y + r, color);
-        //         }
-        //     }
-        // }    
     }
 
     moveDown(){
-        if(!this.collision(0,1,this.activeTetromino)){
-            this.unDraw();
-            this.y++;
-            this.draw();
-        }else{
-            // we lock the piece and generate a new one
-            this.lock();
-            p = randomPiece();
-        }
-
+        !this.collision(0,1,this.activeTetromino) ? (this.unDraw(),this.y++,this.draw()) : (this.lock(),p = randomPiece())
     }
 
-    moveRight = function(){
-        if(!this.collision(1,0,this.activeTetromino)){
-            this.unDraw();
-            this.x++;
-            this.draw();
-        }
+    moveRight() {
+        (!this.collision(1,0,this.activeTetromino)) ? (this.unDraw(),this.x++,this.draw()):null;
     }
     
-    moveLeft = function(){
-        if(!this.collision(-1,0,this.activeTetromino)){
-            this.unDraw();
-            this.x--;
-            this.draw();
-        }
+    moveLeft() {
+        (!this.collision(-1,0,this.activeTetromino)) ? (this.unDraw(),this.x--,this.draw()):null;
     }
-
-
 
 
     rotate(){
         let nextPattern = this.tetromino[(this.tetrominoN + 1)%this.tetromino.length];
         let kick = 0;
-        if(this.collision(0,0,nextPattern)){
-            if(this.x > COL/2){
-                // it's the right wall
-                kick = -1; // we need to move the piece to the left
-            }else{
-                // it's the left wall
-                kick = 1; // we need to move the piece to the right
-            }
-        }
         
-        if(!this.collision(kick,0,nextPattern)){
-            this.unDraw();
-            this.x += kick;
-            this.tetrominoN = (this.tetrominoN + 1)%this.tetromino.length; // (0+1)%4 => 1
-            this.activeTetromino = this.tetromino[this.tetrominoN];
-            this.draw();
-        }
+        this.collision(0,0,nextPattern) ? this.x > COL/2 ? kick = -1 : kick = 1:null;
+
+        !this.collision(kick,0,nextPattern)? (this.unDraw(),this.x += kick,
+                                              this.tetrominoN = (this.tetrominoN + 1)%this.tetromino.length, // (0+1)%4 => 1
+                                              this.activeTetromino = this.tetromino[this.tetrominoN],
+                                              this.draw()):null;
     }
 
 
@@ -159,6 +119,8 @@ class Blockmagiclogic{
                 board[this.y+r][this.x+c] = this.color;
             }
         }
+
+        
         // remove full rows
         for(r = 0; r < ROW; r++){
             let isRowFull = true;
@@ -233,34 +195,39 @@ let p = randomPiece()
 
 document.addEventListener("keydown",CONTROL);
 
-function CONTROL(event){
-    if(event.keyCode == 37){
-        p.moveLeft();
-        dropStart = Date.now();
-    }else if(event.keyCode == 38){
-        p.rotate();
-        dropStart = Date.now();
-    }else if(event.keyCode == 39){
-        p.moveRight();
-        dropStart = Date.now();
-    }else if(event.keyCode == 40){
-        p.moveDown();
-    }
+
+ 
+
+function controlmove(move){
+    (move == "Left") ? (p.moveLeft(),dropStart = Date.now()) :
+    (move == "Up") ? (p.rotate(),dropStart = Date.now()) :
+    (move == "Right") ? (p.moveRight(),dropStart = Date.now()) : 
+    (move == "Down") ? (p.moveDown()) : null
 }
+
+function CONTROL(event){
+    (event.keyCode == 37) ? (controlmove("Left"))
+    :(event.keyCode == 38 )? (controlmove("Up"))
+    :(event.keyCode == 39)? (controlmove("Right"))
+    :(event.keyCode == 40 )? (controlmove("Down"))
+    :null
+}
+
 let dropStart = Date.now();
 let gameOver = false;
 function drop(){
     let now = Date.now();
     let delta = now - dropStart;
-    if(delta > 1*200 ){
-        p.moveDown();
-        dropStart = Date.now();
-    }
-    if( !gameOver){
-        requestAnimationFrame(drop);
-    }
+    delta > 1*200 ?
+        (p.moveDown(), dropStart = Date.now()):null
+    !gameOver? requestAnimationFrame(drop):null
 }
 
 
 drop();
 drawBoard();
+
+$("#Left").on( "click" , () => {controlmove("Left")});
+$("#Up").on( "click", () => {controlmove("Up")})
+$("#Right").on( "click" , () => {controlmove("Right")});
+$("#Down").on( "click" , () => {controlmove("Down")});
