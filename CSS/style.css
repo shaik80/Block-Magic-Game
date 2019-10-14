@@ -14,10 +14,23 @@ body{
         position: absolute;
         top: 4em;
 }
+.btn-size-color{
+    background: #23f111;
+    color: #ffffff;
+    font-size: 10em;
+}
+.fa-arrows-alt{
+    background: #ffffff;
+}
 .score{
-    /* position: absolute;
-    top: 4em; */
+    font-size: 2em;
     font-weight: 900;
+}
+
+.backgtound-image{
+    background:rgba(0, 0, 0, 0.4) 0%,url(../img/art-materials-art-supplies-blocks-1148496.jpg);
+    background-size: 100%;
+    
 }
 .btn-play{
     background-color: #23f111;
@@ -33,16 +46,8 @@ body{
     padding-right: 2em;
     
 }
-
-@media screen and (min-width: 980px) /* Desktop */ {
-    .buttons{
-        position: absolute;
-        left: 15em;
-        top: 15em;  
-    }
-  }
-
-.btn-play:hover{
-    transition:all 2s;
-    background-color: #fdf30c;
+@media screen and (max-width: 991px)  {
+    .btn-size-color{
+        font-size: 2em;
+    }   
 }

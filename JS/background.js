@@ -1,12 +1,12 @@
 let can =document.getElementById("background");
-can.width = window.innerWidth;
-can.height = window.innerHeight;
 const ctx = can.getContext("2d")
-can.width = innerWidth
-can.height = innerHeight
-
 let gravity = 0.3
 let friction = 0.6
+can.width = window.innerWidth;
+can.height = window.innerHeight;
+
+
+
 
 
 function randomIntFromRange(min,max){
