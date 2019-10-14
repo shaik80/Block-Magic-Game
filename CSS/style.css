@@ -28,9 +28,9 @@ body{
 }
 
 .backgtound-image{
-    background:rgba(0, 0, 0, 0.4) 0%,url(../img/art-materials-art-supplies-blocks-1148496.jpg);
-    background-size: 100%;
-    
+    background-image:url(../img/art-materials-art-supplies-blocks-1148496.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 .btn-play{
     background-color: #23f111;
