@@ -84,23 +84,15 @@ class Blockmagiclogic{
 
 
     rotate(){
-            let n = this.activeTetromino.length;
-            console.log(n)
-            let r = Math.floor(n/ 2);
-            let c = n - 1;
-            let temp;
-            for (let i = 0; i < r; i++) {
-               for (let j = i; j < c - i; j++) {
-                  temp = this.activeTetromino[i][j];
-                  this.activeTetromino[i][j] = this.activeTetromino[c - j][i];
-                  this.activeTetromino[c - j][i] = this.activeTetromino[c - i][c - j];
-                  this.activeTetromino[c - i][c - j] = this.activeTetromino[j][c - i]
-                  this.activeTetromino[j][c - i] = temp
-               }
-            }
-        // let nextPattern = this.tetromino[(this.tetrominoN + 1)%this.tetromino.length];
-        // console.log(nextPattern)
-        // let kick = 0 
+        let nextPattern = this.tetromino[(this.tetrominoN + 1)%this.tetromino.length];
+        let kick = 0;
+        
+        this.collision(0,0,nextPattern) ? this.x > COL/2 ? kick = -1 : kick = 1:null;
+
+        !this.collision(kick,0,nextPattern)? (this.unDraw(),this.x += kick,
+                                              this.tetrominoN = (this.tetrominoN + 1)%this.tetromino.length, // (0+1)%4 => 1
+                                              this.activeTetromino = this.tetromino[this.tetrominoN],
+                                              this.draw()):null;
     }
 
 
