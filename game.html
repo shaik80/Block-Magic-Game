@@ -9,34 +9,31 @@
     <link rel="stylesheet" href="../CSS/style.css">
     
 </head>
-<body>
 
-        <div class="row">
-                <div class="col-12 row mt-3 text-center">
-                    
-                    <div class="col-md-6 col-sm-8">
-                            <canvas id="Block" width="250" height="500" class="canvasdesign">  
-                                </canvas>    
-                    </div>
-                    <div class="col-md-6 col-sm-4 mt-3 text-center buttons">
-                            <div class=" mb-3">
-                                    <span class="score">score: </span><span id="score"></span>
-                                </div>
-                            <a class="btn btn-primary pl-4 pr-4 mb-1" id="Up">Up</a><br>
-                            <a class="btn btn-primary pl-4 pr-4 mr-1" id="Left">Left</a>
-                            <a class="btn btn-primary pl-4 pr-4 ml-1" id="Right">Right</a><br>
-                            <a class="btn btn-primary pl-4 pr-4 mt-1" id="Down">Down</a>
-                    </div>
-        
-            </div>
-            </div>    
-            
+<body class="gamebackground">
+        <ul class="nav justify-content-center bg-dark">
+                <li class="nav-item ">
+                        <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true"><span class="score">Score: </span><span class="score" id="score">0</span></a>
+                </li>
+        </ul>
+
+    <div class="mt-4 text-center">
+            <canvas id="Block" width="250" height="500" class="canvastetrisdesign">  
+            </canvas>
+    </div>
+    <nav class="nav nav-pills nav-justified fixed-bottom text-center text-white">
+            <a class="nav-item nav-link btn btn-play" id="Left"><i class='far fa-arrow-alt-circle-left'></i></a>
+            <a class="nav-item nav-link  btn btn-play" id="Up"><i class='fas fa-redo'></i></a>
+            <a class=" nav-item nav-link btn btn-play" id="Down"><i class='far fa-arrow-alt-circle-down'></i></a> 
+            <a class="nav-item nav-link btn btn-play" id="Right"><i class='far fa-arrow-alt-circle-right'></i></a>
+    </nav>            
 
 </body>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../JS/blockArray.js"></script>
-    <script src="../JS/app.js"></script>
+    <script src="./JS/blockArray.js"></script>
+    <script src="./JS/app.js"></script>
     
 </html>
