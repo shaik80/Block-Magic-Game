@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Block Magic</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./CSS/style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Block Magic</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./CSS/style.css">
+
 </head>
+
 <body>
-    <canvas  class="canvasdesign" id="background"></canvas>
+  <canvas class="canvasdesign" id="background"></canvas>
 
-    <div class="container-fluid row text-center start-page">
-        <div class="col-12 mt-5">
-                <img src="./img/logoimg.png" class="img-fluid logo align-middle">
-        </div>
-        <div class="col-12 ">
-                <a class="btn btn-play" id="btn-play" data-toggle="modal" data-target="#exampleModalScrollable">Play Now</a>
-        </div>
+  <div class="container-fluid row text-center start-page">
+    <div class="col-12 mt-5">
+      <img src="./img/logoimg.png" class="img-fluid logo align-middle">
     </div>
+    <div class="col-12 ">
+      <a class="btn btn-play" id="btn-play" data-toggle="modal" data-target="#exampleModalScrollable">Play Now</a>
+    </div>
+  </div>
 
 
-    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          ...
-        </div>
+  <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        ...
       </div>
     </div>
+  </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -42,53 +47,56 @@
         </div>
         <div class="modal-body row  text-center">
           <div class="col-6 instruction">
-              <h5 class="display-4">Desktop</h5>
-              <p class="lead">Keyboard arrows</p>
+            <h5 class="display-4">Desktop</h5>
+            <p class="lead">Keyboard arrows</p>
             <ul class="instruction-arrowsize">
-                <i class='far fa-arrow-alt-circle-up'></i>    
-                <br>
-                <i class='far fa-arrow-alt-circle-left'></i>
-                <i class='far fa-arrow-alt-circle-right instruction-center'></i>
-                <i class='far fa-arrow-alt-circle-right'></i><br>
-                <i class='far fa-arrow-alt-circle-down'></i>
-          </ul>
+              <i class='far fa-arrow-alt-circle-up'></i>
+              <br>
+              <i class='far fa-arrow-alt-circle-left'></i>
+              <i class='far fa-arrow-alt-circle-right instruction-center'></i>
+              <i class='far fa-arrow-alt-circle-right'></i><br>
+              <i class='far fa-arrow-alt-circle-down'></i>
+            </ul>
 
           </div>
           <hr>
           <div class="col-6 instruction">
-                <h5 class="display-4">Mobile</h5>
-                <p class="lead">Press the arrow button on present in webpage  </p>
-                <ul class="instruction-arrowsize">
-                  <i class='fas fa-redo'></i>
-                  <br>
-                  <i class='far fa-arrow-alt-circle-left'></i>
-                  <i class='far fa-arrow-alt-circle-right instruction-center'></i>
-                  <i class='far fa-arrow-alt-circle-right'></i><br>
-                  <i class='far fa-arrow-alt-circle-down'></i>
-                </ul>
+            <h5 class="display-4">Mobile</h5>
+            <p class="lead">Press the arrow button on present in webpage </p>
+            <ul class="instruction-arrowsize">
+              <i class='fas fa-redo'></i>
+              <br>
+              <i class='far fa-arrow-alt-circle-left'></i>
+              <i class='far fa-arrow-alt-circle-right instruction-center'></i>
+              <i class='far fa-arrow-alt-circle-right'></i><br>
+              <i class='far fa-arrow-alt-circle-down'></i>
+            </ul>
           </div>
           <div class="col-12 d-flex justify-content-center">
-                <i class='fas fa-redo'></i><i class='far fa-arrow-alt-circle-up  pr-5'> To Rotate</i>   
-                <i class='far fa-arrow-alt-circle-left pr-5'> To Left</i>   
-                <i class='far fa-arrow-alt-circle-right pr-5'> To Right</i>   
-                <i class='far fa-arrow-alt-circle-down pr-5'> To Down</i>   
+            <i class='fas fa-redo'></i><i class='far fa-arrow-alt-circle-up  pr-5'> To Rotate</i>
+            <i class='far fa-arrow-alt-circle-left pr-5'> To Left</i>
+            <i class='far fa-arrow-alt-circle-right pr-5'> To Right</i>
+            <i class='far fa-arrow-alt-circle-down pr-5'> To Down</i>
           </div>
-                
+
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="btn-ok" > Ok </button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="btn-ok"> Ok </button>
         </div>
       </div>
     </div>
   </div>
 </body>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="./JS/blockArray.js"></script>
-    <script src="./JS/background.js"></script>
-    <script src="./JS/app.js"></script>
-    
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./JS/blockArray.js"></script>
+<script src="./JS/background.js"></script>
+<script src="./JS/app.js"></script>
+
 </html>
