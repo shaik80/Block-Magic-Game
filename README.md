@@ -1,5 +1,5 @@
 # Block Magic Game
-<p align="center> 
+<p align="center"> 
           Shaik Mudassir  | Jashwanthi V
           ------------- | -------------
 </p>
