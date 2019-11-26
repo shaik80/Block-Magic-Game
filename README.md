@@ -17,5 +17,5 @@ Follow the steps showed in the below link
 3. Use ⬇️ arrow to seedup your block
 
 ## screen shoots
-![Click here to play](/img/index.jpg)
+![Click here to play](/img/index.png)
   [Click here to play](https://shaik80.github.io/Block-Magic-Game/)
