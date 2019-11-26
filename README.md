@@ -26,5 +26,5 @@ Follow the steps showed in the below link
 ### Game
 ![Click here to play](/img/game.jpg)
 
-|[Click here to play](https://shaik80.github.io/Block-Magic-Game/)|![Click here to play video](https://shaik80.github.io/Block-Magic-Game/|
+|[Click here to play](https://shaik80.github.io/Block-Magic-Game/)|[Click here to play video](https://shaik80.github.io/Block-Magic-Game/)|
 |-----------------------------------------------------------------|-----------------------------------------------------------------------|
