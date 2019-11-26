@@ -2,6 +2,7 @@
 <b align="center"> 
           Shaik Mudassir  | Jashwanthi V
 </b>
+
 This is a block magic game, where you should arrange blocks and get the points.
 
 
