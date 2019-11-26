@@ -1,10 +1,9 @@
-# Block-Magic-Game
+# Block Magic Game
 This is a block magic game, where you should arrange blocks and get the points.
+
 ## Authors:
-Jashwanthi V
-
-Shaik Mudassir
-
+Shaik Mudassir  | Jashwanthi V
+------------- | -------------
 ## Technology used
 HTML, CSS, JavaScript, JQuery, Bootstrap,Canvas
 ## Objective
