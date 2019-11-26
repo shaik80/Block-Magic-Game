@@ -1,5 +1,5 @@
 # Block Magic Game
-                                                      **Shaik Mudassir  | Jashwanthi V**
+                                                Shaik Mudassir  | Jashwanthi V
 This is a block magic game, where you should arrange blocks and get the points.
 
 
