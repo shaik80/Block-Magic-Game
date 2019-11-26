@@ -10,7 +10,7 @@ This is a block magic game, where you should arrange blocks and get the points.
 + JQuery
 + Bootstrap
 
-## How to play 😵
+## How to play 👨‍💻
 1. when you open the app, you can see the play button.
 2. Click on play button and start play the game.
 3. Your score will be displayed dynamically.
