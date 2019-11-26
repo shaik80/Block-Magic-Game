@@ -9,6 +9,7 @@ This `block magic game is smilar to tetris` develop using canvas and ES6
 + JavaScript
 + JQuery
 + Bootstrap
++ figma design
 
 ## How to play 👨‍💻
 Follow the steps showed in the below link
@@ -17,5 +18,13 @@ Follow the steps showed in the below link
 3. Use ⬇️ arrow to seedup your block
 
 ## screen shoots
+
+### Welcome page
 ![Click here to play](/img/index.png)
-  [Click here to play](https://shaik80.github.io/Block-Magic-Game/)
+### Instruction
+![Click here to play](/img/instruction.jpg)
+### Game
+![Click here to play](/img/game.jpg)
+
+|[Click here to play](https://shaik80.github.io/Block-Magic-Game/)|[Click here to play video](https://shaik80.github.io/Block-Magic-Game/|
+|-----------------------------------------------------------------|----------------------------------------------------------------------|
