@@ -1,7 +1,7 @@
 # Block Magic Game
-<center>
+<p align="center>
 Shaik Mudassir  | Jashwanthi V
-</center>
+</p>
 This is a block magic game, where you should arrange blocks and get the points.
 
 
