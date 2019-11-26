@@ -16,4 +16,6 @@ Follow the steps showed in the below link
 2. Use ⬅️ and ➡️ arrow to move left and right
 3. Use ⬇️ arrow to seedup your block
 
+## screen shoots
+![Click here to play](/img/index.jpg)
   [Click here to play](https://shaik80.github.io/Block-Magic-Game/)
