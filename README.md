@@ -1,9 +1,9 @@
 # Block Magic Game
                                                 Shaik Mudassir  | Jashwanthi V
-This is a block magic game, where you should arrange blocks and get the points.
+This `block magic game is smilar to tetris` develop using canvas and ES6
 
 ## Technology used
-+ HTML
++ HTML5
   * Canvas
 + CSS
 + JavaScript
