@@ -4,7 +4,7 @@ This is a block magic game, where you should arrange blocks and get the points.
 
 ## Technology used
 + HTML
-  *Canvas
+  * Canvas
 + CSS
 + JavaScript
 + JQuery
