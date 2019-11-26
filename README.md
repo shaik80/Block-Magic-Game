@@ -2,9 +2,14 @@
                                                 Shaik Mudassir  | Jashwanthi V
 This is a block magic game, where you should arrange blocks and get the points.
 
-
 ## Technology used
-HTML, CSS, JavaScript, JQuery, Bootstrap,Canvas
++ HTML
+  *Canvas
++ CSS
++ JavaScript
++ JQuery
++ Bootstrap
+
 ## Objective
 Create a Block Magic game application
 ## Guidelines
